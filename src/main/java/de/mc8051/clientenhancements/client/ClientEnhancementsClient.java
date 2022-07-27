@@ -17,11 +17,13 @@ public class ClientEnhancementsClient implements ClientModInitializer {
 
     private Flying flying;
     private FullBrightness fullBrightness;
+    private NoFall noFall;
     private static KeyBindingController keyBindingController;
 
     private static KeyBinding keyFly;
     private static KeyBinding keyBrightness;
     private static KeyBinding keyInvisible;
+    private static KeyBinding keyNoFall;
 
     @Override
     public void onInitializeClient() {
@@ -30,6 +32,7 @@ public class ClientEnhancementsClient implements ClientModInitializer {
         ClientTickEvents.END_CLIENT_TICK.register(this::tick);
         flying = new Flying();
         fullBrightness = new FullBrightness();
+        noFall = new NoFall();
         keyBindingController = new KeyBindingController();
 
         keyFly = KeyBindingHelper.registerKeyBinding(new KeyBinding(
@@ -49,15 +52,23 @@ public class ClientEnhancementsClient implements ClientModInitializer {
         keyInvisible = KeyBindingHelper.registerKeyBinding(new KeyBinding(
                 KeyBindingController.INVISIBLE,
                 InputUtil.Type.KEYSYM,
-                GLFW.GLFW_KEY_I,
+                GLFW.GLFW_KEY_UNKNOWN,
+                "category.enhancements.default"
+        ));
+
+        keyNoFall = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KeyBindingController.NOFALL,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_UNKNOWN,
                 "category.enhancements.default"
         ));
     }
 
     public void tick(MinecraftClient client) {
-        keyBindingController.tick(client, keyFly, keyBrightness, keyInvisible);
+        keyBindingController.tick(client, keyFly, keyBrightness, keyInvisible, keyNoFall);
         fullBrightness.tick(client);
         flying.tick(client);
+        noFall.tick(client);
     }
 
     public static ClientEnhancementsClient getInstance() {

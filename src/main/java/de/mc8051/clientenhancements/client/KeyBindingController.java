@@ -12,6 +12,7 @@ public class KeyBindingController {
     public static String FLY = "key.enhancements.flying";
     public static String BRIGHTNESS = "key.enhancements.brightness";
     public static String INVISIBLE = "key.enhancements.invisible";
+    public static String NOFALL = "key.enhancements.nofall";
     private HashMap<String, Boolean> states = new HashMap<>();
     public void tick(MinecraftClient client, KeyBinding ...keyBindings) {
         Arrays.stream(keyBindings).forEach(key -> {
