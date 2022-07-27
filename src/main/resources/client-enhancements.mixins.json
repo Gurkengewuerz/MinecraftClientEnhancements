@@ -1,0 +1,16 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "de.mc8051.clientenhancements.mixin",
+  "compatibilityLevel": "JAVA_17",
+  "mixins": [
+  ],
+  "client": [
+    "BrihtnessMixin",
+    "InvisibleMixin",
+    "EntityInvoker"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
