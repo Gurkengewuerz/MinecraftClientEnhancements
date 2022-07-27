@@ -6,6 +6,7 @@ import net.minecraft.text.Text;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.TreeMap;
 
 public class KeyBindingController {
 
@@ -26,5 +27,9 @@ public class KeyBindingController {
 
     public boolean getState(String key) {
         return states.getOrDefault(key, false);
+    }
+
+    public TreeMap<String, Boolean> getSortedStates() {
+        return new TreeMap<>(states);
     }
 }
