@@ -29,9 +29,10 @@ public class Flying {
                     player.setVelocity(new Vec3d(
                             velocity.x, FALL_SPEED - velocity.y, velocity.z
                     ));
+                    //System.out.println("DRIP: " + toggle + " " + velocity.y);
                 }
-
-                if (toggle == 0 || velocity.y < FALL_SPEED) toggle = 40;
+                // We have to consider lags, thats why we do a drip every second
+                if (toggle == 0 || velocity.y < FALL_SPEED) toggle = 20;
                 toggle--;
             } else if (switchedState) {
                 switchedState = false;
