@@ -32,7 +32,7 @@ public class HudInfoRenderer implements HudRenderCallback {
             textRenderer.drawWithShadow(
                     matrices,
                     generatedText,
-                    2, (2 + stringHeight) * (index + 1),
+                    2, 2 + ((2 + stringHeight) * index),
                     0xffffff
             );
         }
