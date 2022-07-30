@@ -1,5 +1,6 @@
 package de.mc8051.clientenhancements.client;
 
+import de.mc8051.clientenhancements.CapePlayerHandler;
 import net.fabricmc.api.ClientModInitializer;
 import net.fabricmc.api.EnvType;
 import net.fabricmc.api.Environment;
@@ -32,6 +33,9 @@ public class ClientEnhancementsClient implements ClientModInitializer {
         instance = this;
 
         ClientTickEvents.END_CLIENT_TICK.register(this::tick);
+
+        CapePlayerHandler.init();
+
         flying = new Flying();
         fullBrightness = new FullBrightness();
         noFall = new NoFall();

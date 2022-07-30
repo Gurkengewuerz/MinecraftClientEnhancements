@@ -9,7 +9,9 @@
     "BrihtnessMixin",
     "InvisibleMixin",
     "EntityInvoker",
-    "ZoomMixin"
+    "ZoomMixin",
+    "CapePlayerListMixin",
+    "CapeElytraFeatureMixin"
   ],
   "injectors": {
     "defaultRequire": 1
