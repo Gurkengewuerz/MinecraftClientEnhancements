@@ -18,12 +18,14 @@ public class ClientEnhancementsClient implements ClientModInitializer {
     private Flying flying;
     private FullBrightness fullBrightness;
     private NoFall noFall;
+    private static Zoom zoomer;
     private static KeyBindingController keyBindingController;
 
     private static KeyBinding keyFly;
     private static KeyBinding keyBrightness;
     private static KeyBinding keyInvisible;
     private static KeyBinding keyNoFall;
+    public static KeyBinding keyZoom;
 
     @Override
     public void onInitializeClient() {
@@ -33,6 +35,7 @@ public class ClientEnhancementsClient implements ClientModInitializer {
         flying = new Flying();
         fullBrightness = new FullBrightness();
         noFall = new NoFall();
+        zoomer = new Zoom();
         keyBindingController = new KeyBindingController();
 
         keyFly = KeyBindingHelper.registerKeyBinding(new KeyBinding(
@@ -62,6 +65,13 @@ public class ClientEnhancementsClient implements ClientModInitializer {
                 GLFW.GLFW_KEY_UNKNOWN,
                 "category.enhancements.default"
         ));
+
+        keyZoom = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+                KeyBindingController.ZOOM,
+                InputUtil.Type.KEYSYM,
+                GLFW.GLFW_KEY_UNKNOWN,
+                "category.enhancements.default"
+        ));
     }
 
     public void tick(MinecraftClient client) {
@@ -77,5 +87,9 @@ public class ClientEnhancementsClient implements ClientModInitializer {
 
     public static KeyBindingController getKeyBindingController() {
         return keyBindingController;
+    }
+
+    public static Zoom getZoomer() {
+        return zoomer;
     }
 }
