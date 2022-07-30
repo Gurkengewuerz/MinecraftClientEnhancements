@@ -79,6 +79,11 @@ public class OptionButtonMixin extends Screen {
                     .setDefaultValue(defaultConfig.ZOOM_SMOOTH)
                     .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ZOOM_SMOOTH = newValue)
                     .build());
+            zoom.addEntry(entryBuilder.startLongSlider(Text.translatable("title.enhancements.option.smoothspeed.level"), ClientEnhancements.config.getConfig().ZOOM_SPEED, 50, 1500)
+                    .setTooltip(Text.translatable("title.enhancements.option.zoom.smoothspeed.tooltip"))
+                    .setDefaultValue(defaultConfig.ZOOM_SPEED)
+                    .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ZOOM_SPEED = newValue)
+                    .build());
             zoom.addEntry(entryBuilder.startDoubleField(Text.translatable("title.enhancements.option.zoom.level"), ClientEnhancements.config.getConfig().ZOOM_LEVEL)
                     .setTooltip(Text.translatable("title.enhancements.option.zoom.level.tooltip"))
                     .setDefaultValue(defaultConfig.ZOOM_LEVEL)

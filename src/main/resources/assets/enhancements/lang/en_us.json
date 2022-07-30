@@ -22,6 +22,8 @@
   "title.enhancements.option.zoom": "Zoom",
   "title.enhancements.option.zoom.smooth": "Smooth Zoom",
   "title.enhancements.option.zoom.smooth.tooltip": "Do a smooth transition in/out the zoom",
+  "title.enhancements.option.zoom.smoothspeed": "Smooth Zoom Speed",
+  "title.enhancements.option.zoom.smoothspeed.tooltip": "How fast should the zoom be in ms",
   "title.enhancements.option.zoom.level": "Zoom Level",
   "title.enhancements.option.zoom.level.tooltip": "FOV Zoom Level",
 
