@@ -13,8 +13,9 @@
     "CapePlayerListMixin",
     "CapeElytraFeatureMixin",
     "OptionButtonMixin",
+    "AmbientMixin",
     "XRayMixin",
-    "AmbientMixin"
+    "XRaySodiumMixin"
   ],
   "injectors": {
     "defaultRequire": 1
