@@ -12,7 +12,9 @@
     "ZoomMixin",
     "CapePlayerListMixin",
     "CapeElytraFeatureMixin",
-    "OptionButtonMixin"
+    "OptionButtonMixin",
+    "XRayMixin",
+    "AmbientMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -27,10 +27,15 @@
   "title.enhancements.option.zoom.level": "Zoom Level",
   "title.enhancements.option.zoom.level.tooltip": "FOV Zoom Level",
 
+  "title.enhancements.option.xray": "XRay",
+  "title.enhancements.option.xray.items": "Item List",
+  "title.enhancements.option.xray.items.tooltip": "Which Material should be rendered in XRay?",
+
   "category.enhancements.default": "Client Enhancements",
   "key.enhancements.flying": "Fly",
   "key.enhancements.brightness": "Full-Brightness",
   "key.enhancements.invisible": "Invisible",
   "key.enhancements.nofall": "No Fall",
-  "key.enhancements.zoom": "Zoom"
+  "key.enhancements.zoom": "Zoom",
+  "key.enhancements.xray": "XRay"
 }

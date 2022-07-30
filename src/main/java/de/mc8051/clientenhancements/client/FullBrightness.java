@@ -9,8 +9,8 @@ public class FullBrightness {
     double DEFAULT = 1.0;
 
     public void tick(MinecraftClient client) {
-        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.BRIGHTNESS))
-            update(client, ClientEnhancements.config.getConfig().FULLBRIGHTNESS_GAMMA);
+        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.BRIGHTNESS) || ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.XRAY))
+            update(client, ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.XRAY) ? 16.0 : ClientEnhancements.config.getConfig().FULLBRIGHTNESS_GAMMA);
         else update(client, DEFAULT);
     }
 

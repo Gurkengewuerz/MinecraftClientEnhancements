@@ -79,7 +79,7 @@ public class OptionButtonMixin extends Screen {
                     .setDefaultValue(defaultConfig.ZOOM_SMOOTH)
                     .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ZOOM_SMOOTH = newValue)
                     .build());
-            zoom.addEntry(entryBuilder.startLongSlider(Text.translatable("title.enhancements.option.smoothspeed.level"), ClientEnhancements.config.getConfig().ZOOM_SPEED, 50, 1500)
+            zoom.addEntry(entryBuilder.startLongSlider(Text.translatable("title.enhancements.option.zoom.smoothspeed"), ClientEnhancements.config.getConfig().ZOOM_SPEED, 50, 1500)
                     .setTooltip(Text.translatable("title.enhancements.option.zoom.smoothspeed.tooltip"))
                     .setDefaultValue(defaultConfig.ZOOM_SPEED)
                     .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ZOOM_SPEED = newValue)
@@ -88,6 +88,14 @@ public class OptionButtonMixin extends Screen {
                     .setTooltip(Text.translatable("title.enhancements.option.zoom.level.tooltip"))
                     .setDefaultValue(defaultConfig.ZOOM_LEVEL)
                     .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ZOOM_LEVEL = newValue)
+                    .build());
+
+
+            ConfigCategory xray = builder.getOrCreateCategory(Text.translatable("title.enhancements.option.xray"));
+            xray.addEntry(entryBuilder.startStrList(Text.translatable("title.enhancements.option.xray.items"), ClientEnhancements.config.getConfig().XRAY_MATERIALS)
+                    .setTooltip(Text.translatable("title.enhancements.option.xray.items.tooltip"))
+                    .setDefaultValue(defaultConfig.XRAY_MATERIALS)
+                    .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().XRAY_MATERIALS = newValue)
                     .build());
 
             MinecraftClient.getInstance().setScreen(builder.build());
