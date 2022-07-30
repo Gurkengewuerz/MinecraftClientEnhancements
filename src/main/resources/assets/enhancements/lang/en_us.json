@@ -1,7 +1,33 @@
 {
+  "title.enhancements.option": "Client Enhancements",
+
+  "title.enhancements.option.flying": "Fly",
+  "title.enhancements.option.flying.tpr": "Ticks per Reset",
+  "title.enhancements.option.flying.tpr.tooltip": "Each which tick should the client reset the flying",
+
+  "title.enhancements.option.hud": "HUD",
+  "title.enhancements.option.hud.enable": "Enabled",
+  "title.enhancements.option.hud.enable.tooltip": "Enable active mods in HUD",
+
+  "title.enhancements.option.brightness": "Brightness",
+  "title.enhancements.option.brightness.gamma": "Gamma Level",
+  "title.enhancements.option.brightness.gamma.tooltip": "Full-Brightness Gamma Level",
+
+  "title.enhancements.option.invisible": "Invisible",
+  "title.enhancements.option.invisible.visible": "Entities visible",
+  "title.enhancements.option.invisible.visible.tooltip": "Show invisible Entities",
+  "title.enhancements.option.invisible.glow": "Glow",
+  "title.enhancements.option.invisible.glow.tooltip": "Let invisible Entities glow",
+
+  "title.enhancements.option.zoom": "Zoom",
+  "title.enhancements.option.zoom.smooth": "Smooth Zoom",
+  "title.enhancements.option.zoom.smooth.tooltip": "Do a smooth transition in/out the zoom",
+  "title.enhancements.option.zoom.level": "Zoom Level",
+  "title.enhancements.option.zoom.level.tooltip": "FOV Zoom Level",
+
   "category.enhancements.default": "Client Enhancements",
   "key.enhancements.flying": "Fly",
-  "key.enhancements.brightness": "Brightness",
+  "key.enhancements.brightness": "Full-Brightness",
   "key.enhancements.invisible": "Invisible",
   "key.enhancements.nofall": "No Fall",
   "key.enhancements.zoom": "Zoom"

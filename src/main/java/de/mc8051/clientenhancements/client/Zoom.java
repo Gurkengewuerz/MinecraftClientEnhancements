@@ -1,12 +1,12 @@
 package de.mc8051.clientenhancements.client;
 
+import de.mc8051.clientenhancements.ClientEnhancements;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.option.SimpleOption;
 
 public class Zoom {
 
     // https://github.com/Wurst-Imperium/WI-Zoom/blob/master/src/main/java/net/wurstclient/zoom/WiZoom.java
-    private final double defaultLevel = 3;
     private Double currentLevel;
     private Double defaultMouseSensitivity;
 
@@ -14,11 +14,11 @@ public class Zoom {
     {
         SimpleOption<Double> mouseSensitivitySetting = MinecraftClient.getInstance().options.getMouseSensitivity();
 
-        if(currentLevel == null) currentLevel = defaultLevel;
+        if(currentLevel == null) currentLevel = ClientEnhancements.config.getConfig().ZOOM_LEVEL;
 
         if(!ClientEnhancementsClient.keyZoom.isPressed())
         {
-            currentLevel = defaultLevel;
+            currentLevel = ClientEnhancements.config.getConfig().ZOOM_LEVEL;
             if(defaultMouseSensitivity != null)
             {
                 mouseSensitivitySetting.setValue(defaultMouseSensitivity);

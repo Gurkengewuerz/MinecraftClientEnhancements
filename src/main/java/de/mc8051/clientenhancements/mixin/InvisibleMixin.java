@@ -1,5 +1,6 @@
 package de.mc8051.clientenhancements.mixin;
 
+import de.mc8051.clientenhancements.ClientEnhancements;
 import de.mc8051.clientenhancements.client.ClientEnhancementsClient;
 import de.mc8051.clientenhancements.client.KeyBindingController;
 import net.minecraft.entity.Entity;
@@ -13,14 +14,14 @@ public class InvisibleMixin {
 
     @Inject(at = @At("RETURN"), method = "isInvisible()Z")
     private boolean overrideInvis(CallbackInfoReturnable<Boolean> ci) {
-        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.INVISIBLE)) return false;
+        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.INVISIBLE) && ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_VISIBLE) return false;
         return ci.getReturnValueZ();
     }
 
 
     @Inject(at = @At("RETURN"), method = "isGlowing()Z")
     private boolean overrideInvisGlow(CallbackInfoReturnable<Boolean> ci) {
-        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.INVISIBLE)) {
+        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.INVISIBLE) && ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_GLOW) {
             EntityInvoker target = ((EntityInvoker) (Object) this);
             if (target.getFlagInvoker(5)) return true;
         }

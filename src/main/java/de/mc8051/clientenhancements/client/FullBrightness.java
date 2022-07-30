@@ -1,18 +1,16 @@
 package de.mc8051.clientenhancements.client;
 
+import de.mc8051.clientenhancements.ClientEnhancements;
 import net.minecraft.client.MinecraftClient;
-import net.minecraft.entity.Entity;
 import net.minecraft.text.Text;
-import net.minecraft.util.math.Vec3d;
 
 public class FullBrightness {
 
-    double BRIGHT = 3.5;
     double DEFAULT = 1.0;
 
     public void tick(MinecraftClient client) {
         if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.BRIGHTNESS))
-            update(client, BRIGHT);
+            update(client, ClientEnhancements.config.getConfig().FULLBRIGHTNESS_GAMMA);
         else update(client, DEFAULT);
     }
 

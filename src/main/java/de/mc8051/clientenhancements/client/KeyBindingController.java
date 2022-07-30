@@ -20,8 +20,8 @@ public class KeyBindingController {
         Arrays.stream(keyBindings).forEach(key -> {
             if(key.wasPressed()) {
                 states.put(key.getTranslationKey(), !states.getOrDefault(key.getTranslationKey(), false));
-                final String msg = Text.translatable(key.getTranslationKey()).getString() + ": " + getState(key.getTranslationKey());
-                if(client.player != null) client.player.sendMessage(Text.of(msg), false);
+                // final String msg = Text.translatable(key.getTranslationKey()).getString() + ": " + getState(key.getTranslationKey());
+                // if(client.player != null) client.player.sendMessage(Text.of(msg), false);
             }
         });
     }

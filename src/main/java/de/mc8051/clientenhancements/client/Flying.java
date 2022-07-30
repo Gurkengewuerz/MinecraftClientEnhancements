@@ -1,5 +1,6 @@
 package de.mc8051.clientenhancements.client;
 
+import de.mc8051.clientenhancements.ClientEnhancements;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.network.ClientPlayerEntity;
 import net.minecraft.entity.player.PlayerAbilities;
@@ -32,7 +33,7 @@ public class Flying {
                     //System.out.println("DRIP: " + toggle + " " + velocity.y);
                 }
                 // We have to consider lags, thats why we do a drip every second
-                if (toggle == 0 || velocity.y < FALL_SPEED) toggle = 20;
+                if (toggle == 0 || velocity.y < FALL_SPEED) toggle = ClientEnhancements.config.getConfig().FLYHACK_TICK_PER_RESET;
                 toggle--;
             } else if (switchedState) {
                 switchedState = false;

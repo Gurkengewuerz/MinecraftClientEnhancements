@@ -11,7 +11,8 @@
     "EntityInvoker",
     "ZoomMixin",
     "CapePlayerListMixin",
-    "CapeElytraFeatureMixin"
+    "CapeElytraFeatureMixin",
+    "OptionButtonMixin"
   ],
   "injectors": {
     "defaultRequire": 1

@@ -14,6 +14,7 @@ public class HudInfoRenderer implements HudRenderCallback {
 
     @Override
     public void onHudRender(MatrixStack matrices, float delta) {
+        if (!ClientEnhancements.config.getConfig().HUD_VISIBLE) return;
         final TreeMap<String, Boolean> sortedStates = ClientEnhancementsClient.getKeyBindingController().getSortedStates();
         final List<String> activeMods = sortedStates.keySet().stream().filter(s -> ClientEnhancementsClient.getKeyBindingController().getState(s)).map(key -> Text.translatable(key).getString()).toList();
         drawText(matrices, activeMods);
