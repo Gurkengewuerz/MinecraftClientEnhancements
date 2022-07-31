@@ -13,7 +13,7 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 
 @Mixin(SimpleOption.class)
-public class BrihtnessMixin<T> {
+public class BrightnessMixin<T> {
     @Shadow @Final
     Text text;
 

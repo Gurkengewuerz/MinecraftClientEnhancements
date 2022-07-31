@@ -1,24 +1,31 @@
 package de.mc8051.clientenhancements.client;
 
 import de.mc8051.clientenhancements.ClientEnhancements;
+import net.fabricmc.fabric.api.client.keybinding.v1.KeyBindingHelper;
 import net.minecraft.client.MinecraftClient;
+import net.minecraft.client.option.KeyBinding;
 import net.minecraft.client.option.SimpleOption;
+import net.minecraft.client.util.InputUtil;
+import org.lwjgl.glfw.GLFW;
 
 public class Zoom {
 
+    public KeyBinding keyZoom = KeyBindingHelper.registerKeyBinding(new KeyBinding(
+            "key.enhancements.zoom",
+            InputUtil.Type.KEYSYM,
+            GLFW.GLFW_KEY_UNKNOWN,
+            "category.enhancements.default"
+    ));
     private Double defaultMouseSensitivity;
     private long zoomStarted = 0L;
 
-    public double changeFovBasedOnZoom(double fov)
-    {
+    public double changeFovBasedOnZoom(double fov) {
         SimpleOption<Double> mouseSensitivitySetting = MinecraftClient.getInstance().options.getMouseSensitivity();
-        if(defaultMouseSensitivity == null) defaultMouseSensitivity = mouseSensitivitySetting.getValue();
+        if (defaultMouseSensitivity == null) defaultMouseSensitivity = mouseSensitivitySetting.getValue();
 
-        if(!ClientEnhancementsClient.keyZoom.isPressed())
-        {
+        if (!keyZoom.isPressed()) {
             zoomStarted = 0L;
-            if(defaultMouseSensitivity != null)
-            {
+            if (defaultMouseSensitivity != null) {
                 mouseSensitivitySetting.setValue(defaultMouseSensitivity);
                 defaultMouseSensitivity = null;
             }

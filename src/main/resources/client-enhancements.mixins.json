@@ -6,7 +6,7 @@
   "mixins": [
   ],
   "client": [
-    "BrihtnessMixin",
+    "BrightnessMixin",
     "InvisibleMixin",
     "EntityInvoker",
     "ZoomMixin",
@@ -14,8 +14,8 @@
     "CapeElytraFeatureMixin",
     "OptionButtonMixin",
     "AmbientMixin",
-    "XRayMixin",
-    "XRaySodiumMixin",
+    "BlockMixin",
+    "BlockSodiumMixin",
     "BarrierMixin"
   ],
   "injectors": {

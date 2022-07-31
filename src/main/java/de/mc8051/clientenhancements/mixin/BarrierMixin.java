@@ -2,7 +2,7 @@ package de.mc8051.clientenhancements.mixin;
 
 import de.mc8051.clientenhancements.ClientEnhancements;
 import de.mc8051.clientenhancements.client.ClientEnhancementsClient;
-import de.mc8051.clientenhancements.client.KeyBindingController;
+import de.mc8051.clientenhancements.client.modules.AntiInvisibility;
 import net.minecraft.block.BarrierBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockRenderType;
@@ -23,7 +23,7 @@ public class BarrierMixin extends Block {
     @Inject(at = @At("HEAD"), method = "getRenderType", cancellable = true)
     public void getRenderType(BlockState state, CallbackInfoReturnable<BlockRenderType> info) {
         // Note: This requires to overwrite the minecraft barrier texture. See resources folder
-        if (ClientEnhancementsClient.getKeyBindingController().getState(KeyBindingController.INVISIBLE) && ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_BARRIER)
+        if (ClientEnhancementsClient.getKeyController().getState(AntiInvisibility.class) && ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_BARRIER)
             info.setReturnValue(BlockRenderType.MODEL);
     }
 
