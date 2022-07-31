@@ -3,6 +3,7 @@ package de.mc8051.clientenhancements.client;
 import de.mc8051.clientenhancements.CapePlayerHandler;
 import de.mc8051.clientenhancements.client.modules.AntiInvisibility;
 import de.mc8051.clientenhancements.client.modules.Fly;
+import de.mc8051.clientenhancements.client.modules.Freecam;
 import de.mc8051.clientenhancements.client.modules.FullBrightness;
 import de.mc8051.clientenhancements.client.modules.NoFall;
 import de.mc8051.clientenhancements.client.modules.XRay;
@@ -36,7 +37,8 @@ public class ClientEnhancementsClient implements ClientModInitializer {
                 new Fly(),
                 new NoFall(),
                 new XRay(),
-                new FullBrightness()
+                new FullBrightness(),
+                new Freecam()
         );
 
         zoomer = new Zoom();

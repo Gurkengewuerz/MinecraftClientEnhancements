@@ -16,6 +16,7 @@ The GUI also has tabs for configuring the modules accessible unter `Options` -> 
 * **X-Ray**: Show ores in the ground. (default key `x`)
 * **Zoom**: Optifine like smooth zoom without cinematic camera. (default key `none`)
 * **Anti-Invisibility**: Show hidden entities. Useful to debug armorstands. (default key `i`)
+* **Freecam**: Explore the world around you (default key `none`)
 
 ## Thanks
 A huge thanks to [@LiveOverFlow](https://twitter.com/LiveOverflow) for his inspiration in his [Minecraft series](https://www.youtube.com/watch?v=Ekcseve-mOg&list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG&index=2).  

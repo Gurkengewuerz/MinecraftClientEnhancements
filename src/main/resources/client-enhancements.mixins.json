@@ -6,17 +6,19 @@
   "mixins": [
   ],
   "client": [
-    "BrightnessMixin",
-    "InvisibleMixin",
-    "EntityInvoker",
-    "ZoomMixin",
-    "CapePlayerListMixin",
-    "CapeElytraFeatureMixin",
-    "OptionButtonMixin",
     "AmbientMixin",
+    "BarrierMixin",
     "BlockMixin",
     "BlockSodiumMixin",
-    "BarrierMixin"
+    "BrightnessMixin",
+    "CapeElytraFeatureMixin",
+    "CapePlayerListMixin",
+    "EntityInvoker",
+    "InvisibleMixin",
+    "OptionButtonMixin",
+    "PacketOutputMixin",
+    "SpectatorMixin",
+    "ZoomMixin"
   ],
   "injectors": {
     "defaultRequire": 1
