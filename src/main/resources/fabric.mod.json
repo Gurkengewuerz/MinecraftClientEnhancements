@@ -3,12 +3,14 @@
   "id": "client-enhancements",
   "version": "${version}",
   "name": "Client Enhancements",
-  "description": "",
+  "description": "Add multiple Client Enhancements for Minecraft. Mostly in an technical aspect.",
   "authors": [
     "mc8051"
   ],
   "contact": {
-    "website": "mc8051.de"
+    "homepage": "https://mc8051.de",
+    "sources": "https://github.com/Gurkengewuerz/MinecraftClientEnhancements",
+    "issues": "https://github.com/Gurkengewuerz/MinecraftClientEnhancements/issues"
   },
   "license": "AGPL-3.0",
   "icon": "assets/client-enhancements/icon.png",
