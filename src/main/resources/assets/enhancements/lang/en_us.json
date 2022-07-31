@@ -18,6 +18,8 @@
   "title.enhancements.option.invisible.visible.tooltip": "Show invisible Entities",
   "title.enhancements.option.invisible.glow": "Glow",
   "title.enhancements.option.invisible.glow.tooltip": "Let invisible Entities glow",
+  "title.enhancements.option.invisible.barrier": "Barrier",
+  "title.enhancements.option.invisible.barrier.tooltip": "Show barrier in survival mode",
 
   "title.enhancements.option.zoom": "Zoom",
   "title.enhancements.option.zoom.smooth": "Smooth Zoom",
@@ -37,5 +39,6 @@
   "key.enhancements.invisible": "Invisible",
   "key.enhancements.nofall": "No Fall",
   "key.enhancements.zoom": "Zoom",
-  "key.enhancements.xray": "XRay"
+  "key.enhancements.xray": "XRay",
+  "key.enhancements.freecam": "Freecam"
 }

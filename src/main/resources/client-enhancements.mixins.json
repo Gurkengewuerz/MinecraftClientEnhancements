@@ -15,7 +15,8 @@
     "OptionButtonMixin",
     "AmbientMixin",
     "XRayMixin",
-    "XRaySodiumMixin"
+    "XRaySodiumMixin",
+    "BarrierMixin"
   ],
   "injectors": {
     "defaultRequire": 1

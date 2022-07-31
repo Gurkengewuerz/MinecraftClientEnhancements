@@ -6,6 +6,7 @@ import java.util.List;
 public class CustomConfig {
     public boolean ANTI_INVISIBILITY_GLOW = false;
     public boolean ANTI_INVISIBILITY_VISIBLE = true;
+    public boolean ANTI_INVISIBILITY_BARRIER = true;
 
     public double FULLBRIGHTNESS_GAMMA = 2.5;
 

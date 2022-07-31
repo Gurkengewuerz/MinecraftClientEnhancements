@@ -72,6 +72,11 @@ public class OptionButtonMixin extends Screen {
                     .setDefaultValue(defaultConfig.ANTI_INVISIBILITY_GLOW)
                     .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_GLOW = newValue)
                     .build());
+            invisible.addEntry(entryBuilder.startBooleanToggle(Text.translatable("title.enhancements.option.invisible.barrier"), ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_BARRIER)
+                    .setTooltip(Text.translatable("title.enhancements.option.invisible.barrier.tooltip"))
+                    .setDefaultValue(defaultConfig.ANTI_INVISIBILITY_BARRIER)
+                    .setSaveConsumer(newValue -> ClientEnhancements.config.getConfig().ANTI_INVISIBILITY_BARRIER = newValue)
+                    .build());
 
             ConfigCategory zoom = builder.getOrCreateCategory(Text.translatable("title.enhancements.option.zoom"));
             zoom.addEntry(entryBuilder.startBooleanToggle(Text.translatable("title.enhancements.option.zoom.smooth"), ClientEnhancements.config.getConfig().ZOOM_SMOOTH)
