@@ -1,19 +1,23 @@
 package de.mc8051.clientenhancements.client;
 
+import com.mojang.authlib.GameProfile;
+import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
-import net.minecraft.client.network.OtherClientPlayerEntity;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.data.DataTracker;
 import net.minecraft.entity.player.PlayerEntity;
+import net.minecraft.util.Identifier;
 
-public class FakePlayerEntity extends OtherClientPlayerEntity {
+import java.util.UUID;
+
+public class FakePlayerEntity extends AbstractClientPlayerEntity {
 
     private ClientPlayerEntity player;
     private ClientWorld world;
 
     public FakePlayerEntity(ClientPlayerEntity player, ClientWorld world) {
-        super(world, player.getGameProfile());
+        super(world, new GameProfile(UUID.randomUUID(), player.getName().getString()));
 
         this.player = player;
         this.world = world;
@@ -60,5 +64,13 @@ public class FakePlayerEntity extends OtherClientPlayerEntity {
 
     public void resetPlayerPosition() {
         player.refreshPositionAndAngles(getX(), getY(), getZ(), getYaw(), getPitch());
+    }
+
+    @Override
+    public Identifier getSkinTexture() {
+        if (hasSkinTexture())
+            return super.getSkinTexture();
+        else
+            return player.getSkinTexture();
     }
 }
