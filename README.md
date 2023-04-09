@@ -19,7 +19,7 @@ The GUI also has tabs for configuring the modules accessible unter `Options` -> 
 * **Freecam**: Explore the world around you (default key `none`)
 
 ## Thanks
-A huge thanks to [@LiveOverFlow](https://twitter.com/LiveOverflow) for his inspiration in his [Minecraft series](https://www.youtube.com/watch?v=Ekcseve-mOg&list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG&index=2).  
+A huge thanks to [@LiveOverflow](https://twitter.com/LiveOverflow) for his inspiration in his [Minecraft series](https://www.youtube.com/watch?v=Ekcseve-mOg&list=PLhixgUqwRTjwvBI-hmbZ2rpkAl4lutnJG&index=2).  
 I play Minecraft since end of Alpha and hosted and developed a lot of minecraft server plugins but never developed client side mods.
 
 ## Development

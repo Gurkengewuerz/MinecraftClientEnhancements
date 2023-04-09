@@ -21,13 +21,16 @@
     ],
     "main": [
       "de.mc8051.clientenhancements.ClientEnhancements"
+    ],
+    "modmenu": [
+      "de.mc8051.clientenhancements.config.ModMenuIntegration"
     ]
   },
   "mixins": [
     "client-enhancements.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.14.8",
+    "fabricloader": ">=0.14.19",
     "fabric": "*",
     "minecraft": ">=1.19",
     "cloth-config": "*"

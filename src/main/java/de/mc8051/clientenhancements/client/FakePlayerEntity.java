@@ -13,7 +13,7 @@ public class FakePlayerEntity extends OtherClientPlayerEntity {
     private ClientWorld world;
 
     public FakePlayerEntity(ClientPlayerEntity player, ClientWorld world) {
-        super(world, player.getGameProfile(), null);
+        super(world, player.getGameProfile());
 
         this.player = player;
         this.world = world;

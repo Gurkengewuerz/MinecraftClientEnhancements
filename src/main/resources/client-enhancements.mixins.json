@@ -15,7 +15,6 @@
     "CapePlayerListMixin",
     "EntityInvoker",
     "InvisibleMixin",
-    "OptionButtonMixin",
     "PacketOutputMixin",
     "SpectatorMixin",
     "ZoomMixin"

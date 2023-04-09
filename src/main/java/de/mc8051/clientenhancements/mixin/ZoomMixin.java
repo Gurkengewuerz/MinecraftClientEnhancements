@@ -20,7 +20,6 @@ public class ZoomMixin implements AutoCloseable, SynchronousResourceReloader {
         cir.setReturnValue(ClientEnhancementsClient.getZoomer().changeFovBasedOnZoom(cir.getReturnValueD()));
     }
 
-    @Shadow
     @Override
     public void reload(ResourceManager var1) {
 
