@@ -3,6 +3,7 @@ package de.mc8051.clientenhancements.client;
 import com.mojang.authlib.GameProfile;
 import net.minecraft.client.network.AbstractClientPlayerEntity;
 import net.minecraft.client.network.ClientPlayerEntity;
+import net.minecraft.client.util.SkinTextures;
 import net.minecraft.client.world.ClientWorld;
 import net.minecraft.entity.Entity;
 import net.minecraft.entity.data.DataTracker;
@@ -12,6 +13,8 @@ import net.minecraft.util.Identifier;
 import java.util.UUID;
 
 public class FakePlayerEntity extends AbstractClientPlayerEntity {
+
+    // inspired by https://github.com/Wurst-Imperium/Wurst7/blob/master/src/main/java/net/wurstclient/util/FakePlayerEntity.java
 
     private ClientPlayerEntity player;
     private ClientWorld world;
@@ -55,7 +58,7 @@ public class FakePlayerEntity extends AbstractClientPlayerEntity {
     }
 
     private void spawn() {
-        world.addEntity(getId(), this);
+        world.addEntity(this);
     }
 
     public void despawn() {
@@ -64,13 +67,5 @@ public class FakePlayerEntity extends AbstractClientPlayerEntity {
 
     public void resetPlayerPosition() {
         player.refreshPositionAndAngles(getX(), getY(), getZ(), getYaw(), getPitch());
-    }
-
-    @Override
-    public Identifier getSkinTexture() {
-        if (hasSkinTexture())
-            return super.getSkinTexture();
-        else
-            return player.getSkinTexture();
     }
 }
